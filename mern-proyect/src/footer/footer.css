@@ -1,0 +1,21 @@
+p {
+    background-color: paleturquoise;
+    padding: 20px;
+    text-align: center;
+    bottom: auto;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
