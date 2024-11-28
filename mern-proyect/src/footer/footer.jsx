@@ -3,7 +3,7 @@ import './footer.css';
 const Footer= ()=>{
     return(
         <footer className='footer'>
-            <p> Tu sitio de noticas. 2024</p>
+            <p> 2024</p>
         </footer>
     );
 };
