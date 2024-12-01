@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import { Navigate } from "react-router-dom";
-import Header from "../../header/header.jsx";
 import './register.css';
 
 const Register = ()=>{

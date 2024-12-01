@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
-import Header from "../../header/header.jsx";
 import './login.css';
 
 const Login = () => {
