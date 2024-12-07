@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAuthor, updateAuthor } from '../../services/api';
+import { getAuthor, updateAuthor } from "../../api/authorsApi.js";
 import { useParams } from 'react-router-dom';
 
 const UpdateAuthor=()=>{

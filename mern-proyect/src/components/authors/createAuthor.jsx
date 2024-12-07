@@ -1,5 +1,5 @@
 import React, {useState } from "react";
-import { createAuthor } from "../../services/api.js";
+import { createAuthor } from "../../api/authorsApi.js";
 
 const CreateAuthor=()=>{
     const [name, setName]=useState('');
