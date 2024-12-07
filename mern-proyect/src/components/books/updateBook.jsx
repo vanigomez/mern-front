@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { getBook, updateBook } from "../../api/booksApi.js";
+import { getBooks, updateBook } from "../../api/booksApi.js";
 import { useParams } from 'react-router-dom';
 
 const UpdateBook=()=>{
@@ -7,13 +7,13 @@ const UpdateBook=()=>{
     const [title, setTitle]=useState('');
     const [author, setAuthor]=useState('');
     const [genre, setGenre]=useState('');
-    const [publishedAt, setPublishedAt]=useState('');
+    const [publicationYear, setPublicationYear]=useState('');
     const [loading, setLoading]=useState(true);
 
     useEffect(()=>{
         const fetchBook=async()=>{
             try{
-                const book=await getBook(id);
+                const book=await getBooks(id);
                 setTitle(book.title);
                 setAuthor(book.author);
                 setGenre(book.genre);
@@ -31,7 +31,7 @@ const UpdateBook=()=>{
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const updatedBook = { title, author, genre, publishedAt };
+          const updatedBook = { title, author, genre, publicationYear };
           await updateBook(id, updatedBook);
           alert('Libro actualizado');
         } catch (error) {
@@ -73,8 +73,8 @@ const UpdateBook=()=>{
             <label>Año de Publicación:</label>
             <input
               type="date"
-              value={publishedAt}
-              onChange={(e) => setPublishedAt(e.target.value)}
+              value={publicationYear}
+              onChange={(e) => setPublicationYear(e.target.value)}
             />
           </div>
           <button type="submit">Actualizar Libro</button>

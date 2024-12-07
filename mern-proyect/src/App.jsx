@@ -7,7 +7,7 @@ import Footer from './footer/footer.jsx';
 import BooksList from "./components/books/booksList.jsx";
 import UpdateBook from "./components/books/UpdateBook.jsx"
 import CreateBook from "./components/books/CreateBook.jsx"
-//import AuthorsList from './components/authors/authorsList.jsx';
+import AuthorsList from './components/authors/authorsList.jsx';
 import UpdateAuthor from "./components/authors/UpdateAuthor.jsx";
 import CreateAuthor from "./components/authors/CreateAuthor.jsx";
 

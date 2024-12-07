@@ -6,12 +6,12 @@ const CreateBook=()=>{
     const [title, setTitle]=useState('');
     const [genre, setGenre]=useState('');
     const [author, setAuthor]=useState('');
-    const [publishedAt, setPublishedAt]=useState('');
+    const [publicationYear, setPublicationYear]=useState('');
 
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const data=await createBook({title, genre, author, publishedAt});
+            const data=await createBook({title, genre, author, publicationYear});
             createBook(data);
             console.log('Libro agregado');
             alert('Libro agregado con éxito');
@@ -48,7 +48,7 @@ const CreateBook=()=>{
             <input
             type="date"
             value={publishedAt}
-            onChange={(e)=>setPublishedAt(e.target.value)}/>
+            onChange={(e)=>setPublicationYear(e.target.value)}/>
         </div>
         <button type="submit">Agragar Libro</button>
         </form>

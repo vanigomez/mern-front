@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAuthor, updateAuthor } from "../../api/authorsApi.js";
+import { getAuthors, updateAuthor } from "../../api/authorsApi.js";
 import { useParams } from 'react-router-dom';
 
 const UpdateAuthor=()=>{
@@ -12,7 +12,7 @@ const UpdateAuthor=()=>{
     useEffect(()=>{
         const fetchAuthor=async()=>{
             try{
-                const author=await getAuthor(id);
+                const author=await getAuthors(id);
                 setName(author.name || '');
                 setBirthDate(author.birthDate||'');
                 setNationality(author.nationality||'');

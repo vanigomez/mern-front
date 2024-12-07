@@ -14,6 +14,8 @@ const Login = () => {
     try {
       const response = await axios.post("/api/login", { email, password });
       console.log("Inicio de sesión exitoso:", response.data);
+      //guardar token o datos del usuario en el almacenamiento local
+      localStorage.setItem('token',response.data.token)
       alert("Inicio de sesión exitoso");
       Navigate('/home')
     } catch (error) {
